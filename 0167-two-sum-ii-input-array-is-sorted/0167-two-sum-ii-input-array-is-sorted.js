@@ -22,7 +22,6 @@ var twoSum = function(numbers, target) {
              low++
          
             
-             
          }
             
     
