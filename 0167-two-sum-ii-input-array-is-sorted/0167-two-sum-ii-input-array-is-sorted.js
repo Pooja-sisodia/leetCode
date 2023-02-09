@@ -5,24 +5,17 @@
  */
 var twoSum = function(numbers, target) {
     let n = numbers.length;
-    let low = 0;
-    let high = n-1;
-    let map = new Map();
+    let l = 0;
+    let h = n-1;
     
-     while(low<high){
-         map.set(numbers[low],1)
-         map.set(numbers[high],1)
-         let sum =numbers[low]+numbers[high];
+    while(l<h){
+         let sum =numbers[l]+numbers[h];
          if(sum==target)
-             return[low+1,high+1]
-             
+             return[l+1,h+1]
          else if(sum>target)
-             high--;
+             h--;
          else
-             low++
-         
-            
+             l++
          }
-            
-    
+         return -1
 };
